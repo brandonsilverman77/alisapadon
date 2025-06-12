@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alisa Padon</title>
+  <!-- Search & social metadata -->
+  <meta name="description" content="Biography of public‑health researcher Alisa Padon." />
+  <meta property="og:title" content="Alisa Padon" />
+  <meta property="og:description" content="Biography of public‑health researcher Alisa Padon." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://alisapadon.com" />
+  <!-- If you add a real photo, update this -->
+  <meta property="og:image" content="https://alisapadon.com/og-image.jpg" />
+
+  <style>
+    :root {
+      --accent: #00598c;
+    }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      background: #f7f7f7;
+      color: #333;
+      display: flex;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+    main {
+      max-width: 720px;
+      background: #fff;
+      padding: 2.5rem 2rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 2.25rem;
+      letter-spacing: -0.5px;
+      color: var(--accent);
+      text-align: center;
+    }
+    .profile-pic {
+      display: block;
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 1rem auto 1.5rem;
+      border: 4px solid var(--accent);
+    }
+    section {
+      margin-bottom: 1.5rem;
+    }
+    h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.875rem;
+      margin-top: 2rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Alisa Padon, PhD</h1>
+    <!-- Replace “profile.jpg” with an actual image file placed in the same directory -->
+    <img src="profile.jpg" alt="Portrait of Alisa Padon" class="profile-pic" />
+
+    <section>
+      <h2>About Alisa</h2>
+      <p>
+        Alisa Padon is an inspiring, dedicated leader in public health research whose
+        passion for evidence‑based policy motivates teams and drives real‑world
+        impact. Her scholarship focuses on harnessing rigorous methods to shape
+        policies that protect communities, reduce health disparities, and create
+        healthier environments for future generations.
+      </p>
+      <p>
+        With more than 15 years of experience across academia and the nonprofit
+        sector, Alisa has overseen multi‑disciplinary research initiatives,
+        mentored early‑career scholars, and collaborated with government
+        agencies and international partners. Her work has been published in top
+        peer‑reviewed journals and cited by policymakers around the globe.
+      </p>
+      <p>
+        Outside the lab, you’ll often find Alisa exploring new hiking trails,
+        fostering rescue dogs, or experimenting with bread recipes in the
+        kitchen.
+      </p>
+    </section>
+
+    <section>
+      <h2>Selected Publications & Media</h2>
+      <ul>
+        <li>
+          "<em>Evaluating the Impact of Smoke‑Free Policies on Youth Behavior</em>," <strong>American Journal of Public Health</strong>, 2024
+        </li>
+        <li>
+          "Keynote: Leveraging Data for Health Equity," Society for Research on Nicotine and Tobacco, 2023
+        </li>
+        <li>
+          Interview on NPR’s <em>All Things Considered</em> – "How Local Policy Shapes Public Health," 2022
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>
+        Email Alisa at
+        <a href="mailto:alisa@example.com">alisa@example.com</a> or connect via
+        <a href="https://www.linkedin.com/in/alisapadon" target="_blank" rel="noopener">LinkedIn</a>.
+      </p>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Alisa Padon. All rights reserved.
+    </footer>
+  </main>
+
+  <script>
+    // Auto‑update copyright year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
