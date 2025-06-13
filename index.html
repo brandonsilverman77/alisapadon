@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alisa Padon</title>
-  <!-- Search & social metadata -->
   <meta name="description" content="Biography of Alisa A. Padon, PhD—public-health researcher and research director at PHI's Prevention Policy Group." />
   <meta property="og:title" content="Alisa Padon" />
   <meta property="og:description" content="Biography of Alisa A. Padon, PhD—public-health researcher and research director at PHI's Prevention Policy Group." />
@@ -14,40 +13,64 @@
   <style>
     :root {
       --accent: #00598c;
+      --accent-light: #e6f1f7;
     }
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: "Helvetica Neue", Arial, sans-serif;
       line-height: 1.6;
-      background: #ffffff;
       color: #333;
+      background: #fff;
       display: flex;
       min-height: 100vh;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
     }
+
+    /*— sidebar navigation —*/
+    nav {
+      width: 210px;
+      background: var(--accent-light);
+      padding: 2rem 1rem;
+    }
+    nav h2 {
+      margin: 0 0 1.5rem;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    nav li {
+      margin-bottom: 0.75rem;
+    }
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover { text-decoration: underline; }
+
+    /*— main content —*/
     main {
+      flex: 1;
       max-width: 720px;
-      width: 100%;
-      background: #fff;
-      padding: 2.5rem 2rem 3rem;
-      border-radius: 12px;
+      padding: 3rem 2.5rem 4rem;
     }
     h1 {
       margin-top: 0;
       font-size: 2.25rem;
       letter-spacing: -0.5px;
       color: var(--accent);
-      text-align: center;
+      text-align: left;
     }
     section {
-      margin-bottom: 1.75rem;
+      margin-bottom: 2rem;
     }
     h2 {
       font-size: 1.25rem;
@@ -58,88 +81,62 @@
       color: var(--accent);
       text-decoration: none;
     }
-    a:hover {
-      text-decoration: underline;
-    }
+    a:hover { text-decoration: underline; }
+
     footer {
-      text-align: center;
       font-size: 0.875rem;
-      margin-top: 2rem;
       color: #777;
+      margin-top: 3rem;
     }
-    ul {
-      padding-left: 1.2rem;
-    }
-    li {
-      margin-bottom: 0.35rem;
+    ul { padding-left: 1.2rem; }
+    li { margin-bottom: 0.35rem; }
+
+    @media (max-width: 768px) {
+      body { flex-direction: column; }
+      nav { width: 100%; display: flex; justify-content: center; padding: 1rem; }
+      nav ul { display: flex; gap: 1.5rem; }
+      main { padding: 2rem 1.25rem 3rem; }
     }
   </style>
 </head>
 <body>
+  <!-- Sidebar navigation -->
+  <nav>
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="#biography">Biography</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main content area -->
   <main>
     <h1>Alisa A. Padon, PhD</h1>
 
-    <section>
-      <h2>About Alisa</h2>
-      <p>
-        Alisa A. Padon, PhD, is the research director for the Prevention Policy
-        Group (PPG) at the Public Health Institute (PHI). She has a broad
-        background in behavioral science research methods, and her research
-        focus has centered on commercial determinants of health outcomes, health
-        policy development, and evaluation.
-      </p>
-      <p>
-        Her work at PHI has examined the impacts of cannabis policy
-        implementation on public health to develop actionable policy
-        recommendations. Dr. Padon has led the development and annual collection
-        of several cannabis-related regulatory and retail datasets, including:
-        (1) the <strong>California Local Cannabis Laws Database (CLCLD)</strong>
-        covering 539 city and county jurisdictions with 158 variables spanning
-        retail practices, equity provisions, product and advertising
-        restrictions, smokefree air policies, and more; and (2) the
-        <strong>Dispensaries Database</strong>, which merges California
-        Department of Cannabis Control license data with Weedmaps listings to
-        capture retailer hours, discounts, and products. These datasets have
-        been paired with outcomes data such as youth cannabis use, prenatal
-        cannabis use, and point-of-sale metrics to test the effects of specific
-        regulatory and retail characteristics on health.
-      </p>
-      <p>
-        Dr. Padon also has specific expertise in youth-appealing marketing and
-        promotions of cannabis, alcohol, and tobacco products. She developed the
-        <em>Content Appealing to Youth (CAY) index</em>, a marketing measurement
-        tool that examines psychosocial and neurocognitive appeals through the
-        lens of youths’ vulnerabilities during their unique developmental stage.
-      </p>
-      <p>
-        Dr. Padon holds a doctorate in public health from the Johns Hopkins
-        Bloomberg School of Public Health. She completed a master’s in bioethics
-        and postdoctoral work at the University of Pennsylvania. She also spent
-        several years as a senior Institutional Review Board (IRB) administrator
-        at the University of Pennsylvania and has been a member of the PHI IRB
-        since 2017.
-      </p>
+    <section id="biography">
+      <h2>Biography</h2>
+      <p>Alisa A. Padon, PhD, is the research director for the Prevention Policy Group (PPG) at the Public Health Institute (PHI). She has a broad background in behavioral science research methods, and her research focus has centered on commercial determinants of health outcomes, health policy development, and evaluation.</p>
+      <p>Her work at PHI has examined the impacts of cannabis policy implementation on public health to develop actionable policy recommendations. Dr. Padon has led the development and annual collection of several cannabis-related regulatory and retail datasets, including: (1) the <strong>California Local Cannabis Laws Database (CLCLD)</strong> covering 539 city and county jurisdictions with 158 variables spanning retail practices, equity provisions, product and advertising restrictions, smokefree air policies, and more; and (2) the <strong>Dispensaries Database</strong>, which merges California Department of Cannabis Control license data with Weedmaps listings to capture retailer hours, discounts, and products. These datasets have been paired with outcomes data such as youth cannabis use, prenatal cannabis use, and point-of-sale metrics to test the effects of specific regulatory and retail characteristics on health.</p>
+      <p>Dr. Padon also has specific expertise in youth-appealing marketing and promotions of cannabis, alcohol, and tobacco products. She developed the <em>Content Appealing to Youth (CAY) index</em>, a marketing measurement tool that examines psychosocial and neurocognitive appeals through the lens of youths’ vulnerabilities during their unique developmental stage.</p>
+      <p>Dr. Padon holds a doctorate in public health from the Johns Hopkins Bloomberg School of Public Health. She completed a master’s in bioethics and postdoctoral work at the University of Pennsylvania. She also spent several years as a senior Institutional Review Board (IRB) administrator at the University of Pennsylvania and has been a member of the PHI IRB since 2017.</p>
     </section>
 
-    <section>
+    <section id="publications">
       <h2>Selected Publications & Media</h2>
       <ul>
-        <li>Padon AA, <em>et&nbsp;al.</em> "Evaluating the impact of cannabis retail policy on adolescent use: a longitudinal study." <strong>Journal of Adolescent Health</strong>, 2024.</li>
-        <li>Featured expert, CNN Health: "State cannabis laws and youth consumption," April&nbsp;2025.</li>
-        <li>Interview: NPR <em>All Things Considered</em> – commentary on youth-focused cannabis marketing, Feb&nbsp;2023.</li>
-        <li>Padon AA. Keynote: "Leveraging Data for Health Equity" at the Society for Research on Nicotine & Tobacco, 2023.</li>
-        <li>Quoted in <em>The New York Times</em>, "How Local Rules Shape America’s Cannabis Market," Oct&nbsp;2022.</li>
-        <li>Padon AA, <em>et&nbsp;al.</em> "Content Appealing to Youth (CAY) index: A tool for assessing marketing messages." <strong>American Journal of Public Health</strong>, 2021.</li>
+        <li>Padon AA, <em>et&nbsp;al.</em> “Evaluating the impact of cannabis retail policy on adolescent use: a longitudinal study.” <strong>Journal of Adolescent Health</strong>, 2024.</li>
+        <li>Featured expert, CNN Health: “State cannabis laws and youth consumption,” April 2025.</li>
+        <li>Interview: NPR <em>All Things Considered</em> – commentary on youth-focused cannabis marketing, Feb 2023.</li>
+        <li>Padon AA. Keynote: “Leveraging Data for Health Equity” at the Society for Research on Nicotine & Tobacco, 2023.</li>
+        <li>Quoted in <em>The New York Times</em>, “How Local Rules Shape America’s Cannabis Market,” Oct 2022.</li>
+        <li>Padon AA, <em>et&nbsp;al.</em> “Content Appealing to Youth (CAY) index: A tool for assessing marketing messages.” <strong>American Journal of Public Health</strong>, 2021.</li>
       </ul>
     </section>
 
-    <section>
+    <section id="contact">
       <h2>Contact</h2>
-      <p>
-        Email Alisa at
-        <a href="mailto:alisa@example.com">alisa@example.com</a> or connect via
-        <a href="https://www.linkedin.com/in/alisapadon" target="_blank" rel="noopener">LinkedIn</a>.
-      </p>
+      <p>Email Alisa at <a href="mailto:alisa@example.com">alisa@example.com</a> or connect via <a href="https://www.linkedin.com/in/alisapadon" target="_blank" rel="noopener">LinkedIn</a>.</p>
     </section>
 
     <footer>
