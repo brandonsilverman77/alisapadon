@@ -24,7 +24,7 @@
     .wrapper {
       display: flex;
       gap: 2rem;
-      max-width: 780px; /* widened earlier */
+      max-width: 780px;
       width: 100%;
     }
 
@@ -37,28 +37,33 @@
       text-align: right;
     }
     nav li { margin-bottom: 0.75rem; }
-    nav a {
-      color: #000;
-      text-decoration: none;
-      font-weight: 600;
-    }
+    nav a { color: #000; text-decoration: none; font-weight: 600; }
     nav a:hover { text-decoration: underline; }
 
     /* Main content */
     main { flex: 1; }
 
+    /* Header row with image + title */
+    .header-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .profile-pic {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
     .page-title {
-      font-size: 1.5rem; /* larger than rest */
+      font-size: 1.5rem;
       font-weight: 700;
-      margin: 0 0 1.5rem;
+      margin: 0;
     }
 
-    h2, h3 {
-      font-size: 1rem;
-      margin: 0 0 0.5rem;
-      font-weight: 700;
-    }
-
+    h2 { font-size: 1rem; margin: 0 0 0.5rem; font-weight: 700; }
     section { margin-bottom: 2rem; }
     ul { padding-left: 1.2rem; }
     li { margin-bottom: 0.35rem; }
@@ -69,6 +74,7 @@
       .wrapper { flex-direction: column; align-items: flex-start; }
       nav { margin-bottom: 1.5rem; }
       nav ul { text-align: left; }
+      .header-row { flex-direction: row; }
     }
   </style>
 </head>
@@ -85,7 +91,11 @@
 
     <!-- Main content -->
     <main>
-      <h1 class="page-title">Alisa Padon, PhD</h1>
+      <div class="header-row">
+        <!-- Replace 'AlisaPadonbio.jpeg' with your preferred filename if needed -->
+        <img src="AlisaPadonbio.jpeg" alt="Portrait of Alisa Padon" class="profile-pic" />
+        <h1 class="page-title">Alisa Padon, PhD</h1>
+      </div>
 
       <h2 id="biography">Biography</h2>
       <p>Alisa A. Padon, PhD, is the research director for the Prevention Policy Group (PPG) at the Public Health Institute (PHI). She has a broad background in behavioral science research methods, and her research focus has centered on commercial determinants of health outcomes, health policy development, and evaluation.</p>
