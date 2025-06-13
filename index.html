@@ -11,112 +11,95 @@
   <meta property="og:url" content="https://alisapadon.com" />
 
   <style>
-    :root {
-      --accent: #00598c;
-    }
-
+    /* Global reset */
     *, *::before, *::after { box-sizing: border-box; }
 
     body {
       margin: 0;
       font-family: "Helvetica Neue", Arial, sans-serif;
+      font-size: 1rem;               /* uniform font size */
       line-height: 1.6;
-      color: #333;
-      background: #fff; /* entire page pure white */
+      color: #000;                   /* all text black */
+      background: #fff;              /* full white page */
       display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+      justify-content: center;       /* center entire site horizontally */
+      padding: 2rem 1rem;
     }
 
-    /*— top navigation —*/
-    nav {
+    /* Wrapper holds sidebar + main */
+    .wrapper {
+      display: flex;
+      gap: 2rem;
+      max-width: 960px;
       width: 100%;
-      background: #fff; /* white bar */
-      padding: 1rem 0;
-      border-bottom: 1px solid #eee;
+    }
+
+    /* Sidebar */
+    nav {
+      min-width: 180px;
     }
     nav ul {
       list-style: none;
-      margin: 0 auto;
+      margin: 0;
       padding: 0;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      max-width: 720px;
     }
+    nav li { margin-bottom: 0.75rem; }
     nav a {
-      color: #000; /* black menu font */
+      color: #000;
       text-decoration: none;
       font-weight: 600;
     }
     nav a:hover { text-decoration: underline; }
 
-    /*— main content —*/
+    /* Main content */
     main {
       flex: 1;
-      width: 100%;
-      max-width: 720px;
-      margin: 3rem auto 4rem;
-      padding: 0 1.25rem;
     }
-    h1 {
-      margin-top: 0;
-      font-size: 2.25rem;
-      letter-spacing: -0.5px;
-      color: var(--accent);
-      text-align: center;
-    }
-    section { margin-bottom: 2rem; }
-    h2 {
-      font-size: 1.25rem;
-      margin-bottom: 0.5rem;
-      color: var(--accent);
-    }
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    a:hover { text-decoration: underline; }
 
-    footer {
-      font-size: 0.875rem;
-      color: #777;
-      text-align: center;
-      margin-top: 3rem;
+    /* Headings same size but bold */
+    h1, h2 {
+      font-size: 1rem;
+      margin: 0 0 0.5rem;
+      font-weight: 700;
     }
+
+    section { margin-bottom: 2rem; }
+
     ul { padding-left: 1.2rem; }
     li { margin-bottom: 0.35rem; }
 
-    @media (max-width: 600px) {
-      nav ul { gap: 1.25rem; }
-      main { margin: 2rem auto 3rem; }
+    footer {
+      margin-top: 3rem;
+      font-size: 1rem;
+    }
+
+    /* Responsive: stack sidebar on small screens */
+    @media (max-width: 640px) {
+      .wrapper { flex-direction: column; align-items: flex-start; }
+      nav { margin-bottom: 1.5rem; }
     }
   </style>
 </head>
 <body>
-  <!-- Top navigation menu -->
-  <nav>
-    <ul>
-      <li><a href="#biography">Biography</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <div class="wrapper">
+    <!-- Left‑hand navigation -->
+    <nav>
+      <ul>
+        <li><a href="#biography">Biography</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-  <!-- Main content area -->
-  <main>
-    <h1>Alisa A. Padon, PhD</h1>
-
-    <section id="biography">
-      <h2>Biography</h2>
+    <!-- Main content -->
+    <main>
+      <h1 id="biography">Biography</h1>
       <p>Alisa A. Padon, PhD, is the research director for the Prevention Policy Group (PPG) at the Public Health Institute (PHI). She has a broad background in behavioral science research methods, and her research focus has centered on commercial determinants of health outcomes, health policy development, and evaluation.</p>
       <p>Her work at PHI has examined the impacts of cannabis policy implementation on public health to develop actionable policy recommendations. Dr. Padon has led the development and annual collection of several cannabis‑related regulatory and retail datasets, including: (1) the <strong>California Local Cannabis Laws Database (CLCLD)</strong> covering 539 city and county jurisdictions with 158 variables spanning retail practices, equity provisions, product and advertising restrictions, smokefree air policies, and more; and (2) the <strong>Dispensaries Database</strong>, which merges California Department of Cannabis Control license data with Weedmaps listings to capture retailer hours, discounts, and products. These datasets have been paired with outcomes data such as youth cannabis use, prenatal cannabis use, and point‑of‑sale metrics to test the effects of specific regulatory and retail characteristics on health.</p>
       <p>Dr. Padon also has specific expertise in youth‑appealing marketing and promotions of cannabis, alcohol, and tobacco products. She developed the <em>Content Appealing to Youth (CAY) index</em>, a marketing measurement tool that examines psychosocial and neurocognitive appeals through the lens of youths’ vulnerabilities during their unique developmental stage.</p>
       <p>Dr. Padon holds a doctorate in public health from the Johns Hopkins Bloomberg School of Public Health. She completed a master’s in bioethics and postdoctoral work at the University of Pennsylvania. She also spent several years as a senior Institutional Review Board (IRB) administrator at the University of Pennsylvania and has been a member of the PHI IRB since 2017.</p>
-    </section>
 
-    <section id="publications">
-      <h2>Selected Publications & Media</h2>
+      <h2 id="publications">Selected Publications & Media</h2>
       <ul>
         <li>Padon AA, <em>et&nbsp;al.</em> "Evaluating the impact of cannabis retail policy on adolescent use: a longitudinal study." <strong>Journal of Adolescent Health</strong>, 2024.</li>
         <li>Featured expert, CNN Health: "State cannabis laws and youth consumption," April&nbsp;2025.</li>
@@ -125,20 +108,16 @@
         <li>Quoted in <em>The New York Times</em>, "How Local Rules Shape America’s Cannabis Market," Oct&nbsp;2022.</li>
         <li>Padon AA, <em>et&nbsp;al.</em> "Content Appealing to Youth (CAY) index: A tool for assessing marketing messages." <strong>American Journal of Public Health</strong>, 2021.</li>
       </ul>
-    </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
+      <h2 id="contact">Contact</h2>
       <p>Email Alisa at <a href="mailto:alisa@example.com">alisa@example.com</a> or connect via <a href="https://www.linkedin.com/in/alisapadon" target="_blank" rel="noopener">LinkedIn</a>.</p>
-    </section>
 
-    <footer>
-      © <span id="year"></span> Alisa Padon. All rights reserved.
-    </footer>
-  </main>
+      <footer>© <span id="year"></span> Alisa Padon. All rights reserved.</footer>
+    </main>
+  </div>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
