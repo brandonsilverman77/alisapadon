@@ -11,7 +11,7 @@
     body {
       margin: 0;
       font-family: "Helvetica Neue", Arial, sans-serif;
-      font-size: 1rem;  /* uniform size */
+      font-size: 1rem;
       line-height: 1.6;
       color: #000;
       background: #fff;
@@ -24,23 +24,22 @@
     .wrapper {
       display: flex;
       gap: 2rem;
-      max-width: 680px;  /* narrowed */
+      max-width: 780px; /* widened by ~15% */
       width: 100%;
     }
 
     /* Sidebar */
-    nav {
-      min-width: 180px;
-    }
+    nav { min-width: 180px; }
     .site-title {
       font-weight: 700;
       margin: 0 0 1rem;
+      text-align: right; /* right‑aligned title */
     }
     nav ul {
       list-style: none;
       margin: 0;
       padding: 0;
-      text-align: right; /* flush right */
+      text-align: right;
     }
     nav li { margin-bottom: 0.75rem; }
     nav a {
@@ -52,34 +51,26 @@
 
     /* Main content */
     main { flex: 1; }
-
     h1, h2 {
       font-size: 1rem;
       margin: 0 0 0.5rem;
       font-weight: 700;
     }
-
     section { margin-bottom: 2rem; }
-
     ul { padding-left: 1.2rem; }
     li { margin-bottom: 0.35rem; }
-
-    footer {
-      margin-top: 3rem;
-      font-size: 1rem;
-    }
+    footer { margin-top: 3rem; font-size: 1rem; }
 
     /* Responsive */
     @media (max-width: 640px) {
       .wrapper { flex-direction: column; align-items: flex-start; }
       nav { margin-bottom: 1.5rem; }
-      nav ul { text-align: left; }
+      nav ul, .site-title { text-align: left; }
     }
   </style>
 </head>
 <body>
   <div class="wrapper">
-    <!-- Sidebar with site title and menu -->
     <nav>
       <div class="site-title">Alisa Padon, PhD</div>
       <ul>
@@ -89,7 +80,6 @@
       </ul>
     </nav>
 
-    <!-- Main content -->
     <main>
       <h1 id="biography">Biography</h1>
       <p>Alisa A. Padon, PhD, is the research director for the Prevention Policy Group (PPG) at the Public Health Institute (PHI). She has a broad background in behavioral science research methods, and her research focus has centered on commercial determinants of health outcomes, health policy development, and evaluation.</p>
