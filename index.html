@@ -1,119 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alisa Padon</title>
-  <meta name="description" content="Biography and publications of Alisa A. Padon, PhD—public-health researcher and research director at PHI." />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; }
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Alisa Padon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Merriweather', serif;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900">
+    <header class="sticky top-0 bg-white z-10 border-b border-gray-200">
+      <nav class="max-w-4xl mx-auto flex justify-between items-center p-4 text-sm">
+        <div class="font-bold text-lg">Alisa Padon</div>
+        <div class="space-x-4">
+          <a href="#about" class="hover:underline">About</a>
+          <a href="#projects" class="hover:underline">Projects</a>
+          <a href="#resume" class="hover:underline">Resume</a>
+          <a href="#contact" class="hover:underline">Contact</a>
+        </div>
+      </nav>
+    </header>
 
-    body {
-      margin: 0;
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #000;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      padding: 2rem 1rem;
-    }
+    <main class="max-w-3xl mx-auto px-4 py-12">
+      <section id="about" class="mb-16">
+        <h1 class="text-4xl font-bold mb-4">About</h1>
+        <p class="text-lg leading-relaxed">
+          I am a public health researcher focused on understanding how policy can reduce health disparities and protect vulnerable populations. I direct a research team at a nonprofit organization and work closely with government agencies, advocates, and community leaders.
+        </p>
+      </section>
 
-    /* Wrapper holds sidebar + main */
-    .wrapper {
-      display: flex;
-      gap: 2rem;
-      max-width: 780px;
-      width: 100%;
-    }
+      <section id="projects" class="mb-16">
+        <h2 class="text-3xl font-bold mb-4">Projects</h2>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>Tracking and grading local policies on tobacco, cannabis, and gambling.</li>
+          <li>Conducting evaluations of public health media campaigns.</li>
+          <li>Providing technical assistance to local and state health departments.</li>
+        </ul>
+      </section>
 
-    /* Sidebar */
-    nav { min-width: 180px; }
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      text-align: right;
-    }
-    nav li { margin-bottom: 0.75rem; }
-    nav a { color: #000; text-decoration: none; font-weight: 600; }
-    nav a:hover { text-decoration: underline; }
+      <section id="resume" class="mb-16">
+        <h2 class="text-3xl font-bold mb-4">Resume</h2>
+        <p class="text-lg leading-relaxed">
+          You can view or download my full CV here:
+          <a
+            href="Alisa%20Padon_CV%206-5-25.docx.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-blue-600 underline hover:text-blue-800"
+          >
+            Alisa Padon CV (PDF)
+          </a>.
+        </p>
+      </section>
 
-    /* Main content */
-    main { flex: 1; }
-
-    /* Header row with image + title */
-    .header-row {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-    .profile-pic {
-      width: 96px;
-      height: 96px;
-      border-radius: 50%;
-      object-fit: cover;
-      flex-shrink: 0;
-    }
-    .page-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin: 0;
-    }
-
-    h2 { font-size: 1rem; margin: 0 0 0.5rem; font-weight: 700; }
-    section { margin-bottom: 2rem; }
-    ul { padding-left: 1.2rem; }
-    li { margin-bottom: 0.35rem; }
-    footer { margin-top: 3rem; font-size: 1rem; }
-
-    /* Responsive */
-    @media (max-width: 640px) {
-      .wrapper { flex-direction: column; align-items: flex-start; }
-      nav { margin-bottom: 1.5rem; }
-      nav ul { text-align: left; }
-      .header-row { flex-direction: row; }
-    }
-  </style>
-</head>
-<body>
-  <div class="wrapper">
-    <!-- Left-hand navigation -->
-    <nav>
-      <ul>
-        <li><a href="#biography">Biography</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- Main content -->
-    <main>
-      <div class="header-row">
-        <!-- Replace 'AlisaPadonbio.jpeg' with your preferred filename if needed -->
-        <img src="AlisaPadonbio.jpeg" alt="Portrait of Alisa Padon" class="profile-pic" />
-        <h1 class="page-title">Alisa Padon, PhD</h1>
-      </div>
-
-      <h2 id="biography">Biography</h2>
-      <p>Alisa A. Padon, PhD, is the research director for the Prevention Policy Group (PPG) at the Public Health Institute (PHI). She has a broad background in behavioral science research methods, and her research focus has centered on commercial determinants of health outcomes, health policy development, and evaluation.</p>
-      <p>Her work at PHI has examined the impacts of cannabis policy implementation on public health to develop actionable policy recommendations. Dr. Padon has led the development and annual collection of several cannabis-related regulatory and retail datasets, including: (1) the <strong>California Local Cannabis Laws Database (CLCLD)</strong> covering 539 city and county jurisdictions with 158 variables spanning retail practices, equity provisions, product and advertising restrictions, smokefree air policies, and more; and (2) the <strong>Dispensaries Database</strong>, which merges California Department of Cannabis Control license data with Weedmaps listings to capture retailer hours, discounts, and products. These datasets have been paired with outcomes data such as youth cannabis use, prenatal cannabis use, and point-of-sale metrics to test the effects of specific regulatory and retail characteristics on health.</p>
-      <p>Dr. Padon also has specific expertise in youth-appealing marketing and promotions of cannabis, alcohol, and tobacco products. She developed the <em>Content Appealing to Youth (CAY) index</em>, a marketing measurement tool that examines psychosocial and neurocognitive appeals through the lens of youths’ vulnerabilities during their unique developmental stage.</p>
-      <p>Dr. Padon holds a doctorate in public health from the Johns Hopkins Bloomberg School of Public Health. She completed a master’s in bioethics and postdoctoral work at the University of Pennsylvania. She also spent several years as a senior Institutional Review Board (IRB) administrator at the University of Pennsylvania and has been a member of the PHI IRB since 2017.</p>
-
- 
-
-      <h2 id="contact">Contact</h2>
-      <p>Email Alisa at <a href="mailto:alisa@example.com">alisa@example.com</a> or connect via <a href="https://www.linkedin.com/in/alisa-padon-0770496/" target="_blank" rel="noopener">LinkedIn</a>.</p>
-
-      <footer>© <span id="year"></span> Alisa Padon. All rights reserved.</footer>
+      <section id="contact" class="mb-16">
+        <h2 class="text-3xl font-bold mb-4">Contact</h2>
+        <p class="text-lg leading-relaxed">
+          You can reach me at <a href="mailto:alisa@example.com" class="text-blue-600 hover:underline">alisa@example.com</a> or find me on <a href="#" class="text-blue-600 hover:underline">LinkedIn</a>.
+        </p>
+      </section>
     </main>
-  </div>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
+    <footer class="text-center text-sm text-gray-500 py-6">
+      &copy; 2025 Alisa Padon
+    </footer>
+  </body>
 </html>
